@@ -501,6 +501,9 @@
     if(this.options.shorterTotal === true){  //format number like 1.2k or 5M
       total = this.shorterTotal(total);
     }
+    else {
+      total = this.total.toLocaleString();
+    }
     
     if(template !== ''){  //if there is a template
       template = template.replace('{total}', total);
